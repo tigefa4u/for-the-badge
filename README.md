@@ -1,28 +1,95 @@
-﻿# For the Badge
+<picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://forthebadge.com/images/logo.svg">
+   <source media="(prefers-color-scheme: light)" srcset="https://forthebadge.com/images/logo_black.svg">
+   <img alt="forthebadge logo" src="https://forthebadge.com/images/logo.svg" style="max-width: 100%; height: auto;">
+</picture>
 
-[![forthebadge](https://forthebadge.com/images/badges/fuck-it-ship-it.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/no-ragrets.svg)](https://forthebadge.com)
+## Looking to submit a badge to be hosted on our site?
 
-We don't develop for the money, power, fame, or codebabes. We do it **For the Badge.** It all started because of an obsession with two words: [![Build Status](https://travis-ci.org/BraveUX/for-the-badge.svg)](https://travis-ci.org/BraveUX/for-the-badge). It all ended with this: _badges, for badges’ sake_.
+To submit a badge, simply visit [our official generator](https://forthebadge.com/#/generator) create the badge and click "Submit to Approval". Once approved, it joins our collection for all to use. We allow both signed-in and non-signed-in users to submit badges for approval. Signed-in users have the added benefit of tracking the approval status of their submissions.
 
-## Badge Usage
+## For standard users
 
-1. Check out all the badges [here](https://forthebadge.com)!
-2. Copy the image URL or markdown.
-3. Swag out your Github readme.
+To explore our unique collection and generate badges, simply visit [our official website](https://forthebadge.com). Our site is designed to enrich your experience with an array of features and services, all dedicated to badges.
 
-## Contributing
-Interested in having a badge submitted to the general site? Submit a pull request of the badge you'd like to see added and provide a **Share Badge** link generated from our [For The Badge Generator](http://forthebadge.com/generator). 
+## For advanced users
 
-Not all badges will be accepted but if there is enough community excitement behind a badge or if we just really like it, we'll add it to the growing list of badges!
+We have open-sourced our badge generator so you can self-host and run our classic generator! It all started with our obsession for badges, and it ends with badges for badges' sake.
 
-<br />
-<br />
+We have posted a tutorial on our youtube channel that walks through how to setup this project, [you can view it here](https://www.youtube.com/watch?v=fIKNEauzU-g)
 
+A hosted verison of this open source generator [can be found here](https://generator.forthebadge.com)
 
-# For the Badge Generator
-Interested in learning more or seeing the code behind the [Badge Generator](http://forthebadge.com/generator)? Check out the repo [here](https://github.com/ekfuhrmann/badge-generator).
-## Important
-The **Copy Markdown** output is in Base64 so as to not need the badge to be hosted anywhere. This unfortunately means that it will not render in many markdown programs due to security issues, [though there have been numerous](https://github.com/github/markup/issues/270) [submissions to account for this](https://github.com/gjtorikian/html-pipeline/pull/227). Nonetheless, should you wish to include one of these badges in your own markdown where it fails to support Base64, I suggest you download the badge, and then upload it to the project you wish for it to render in. It's a minor inconvenience, but it sure is better than nothing.
+### Running Locally
 
-Not good enough? Well you could also [submit a pull request](#contributing) for the badge to be hosted on our [For The Badge](https://forthebadge.com/) site.
+To run For the Badge on your local computer, follow these simple steps:
+
+1. Clone the repository:
+
+   ```
+   git clone https://github.com/forthebadge/for-the-badge.git
+   cd for-the-badge
+   ```
+
+2. Install the project dependencies using npm:
+
+   ```
+   npm install
+   ```
+
+3. Start the local server using Vite:
+
+   ```
+   npx vite
+   ```
+
+4. The badge generator will be available at `http://localhost:5173`. You can access it through your web browser.
+
+5. To build the project for production:
+   ```
+   npx vite build
+   ```
+
+### Using Docker
+
+You can run For the Badge using Docker in two different ways. Choose the method that best suits your needs:
+
+#### Method 1: Pull and Run the Docker Image
+
+Use this method if you want to quickly run the latest stable version of For the Badge without building it yourself.
+
+1. Pull the Docker image from our repository:
+
+   ```
+   docker pull forthebadge/forthebadge
+   ```
+
+2. Run the Docker image:
+   ```
+   docker run -p 8080:8080 forthebadge/forthebadge
+   ```
+
+#### Method 2: Build and Run the Docker Image Yourself
+
+This method is ideal if you have downloaded the source code and wish to build the Docker image yourself, perhaps for development or testing purposes.
+
+1. Build the Docker image:
+
+   ```
+   docker build -t for-the-badge .
+   ```
+
+2. Run the Docker image:
+   ```
+   docker run -p 8080:8080 for-the-badge
+   ```
+
+Regardless of the method chosen, The badge generator will be available at `http://localhost:8080`. You can access it through your web browser.
+
+### Want to Contribute?
+
+Contributions are welcome and keep this project going! If you'd like to contribute, please fork the repository, make your changes, and submit a pull request. Your contributions may be featured on our official site!
+
+## License
+
+This project is licensed under the GNU General Public License v3.0 - see the [COPYING](https://github.com/forthebadge/for-the-badge/blob/master/COPYING) file for details.
