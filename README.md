@@ -18,6 +18,8 @@ We have open-sourced our badge generator so you can self-host and run our classi
 
 We have posted a tutorial on our youtube channel that walks through how to setup this project, [you can view it here](https://www.youtube.com/watch?v=fIKNEauzU-g)
 
+A hosted verison of this open source generator [can be found here](https://generator.forthebadge.com)
+
 ### Running Locally
 
 To run For the Badge on your local computer, follow these simple steps:
